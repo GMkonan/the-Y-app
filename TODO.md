@@ -10,8 +10,8 @@
 - [] try using highlight
 - [X] remove notion option login
 - [] Make it easier to copy text inside post
-- [] deploy to vercel
-    - [] put URL into og NextSEO (id page)
+- [X] deploy to vercel
+    - [X] put URL into og NextSEO (id page)
 
 https://og-playground.vercel.app/
 

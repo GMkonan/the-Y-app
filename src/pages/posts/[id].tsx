@@ -14,7 +14,7 @@ import { NextSeo } from "next-seo";
 dayjs.extend(relativeTime);
 
 const SinglePostView = ({
-  post: { id, content, createdAt },
+  post: { content, createdAt },
   author,
 }: PostWithAuthor) => {
   return (
@@ -73,14 +73,14 @@ const SinglePostPage: NextPage<{ id: string }> = ({ id }) => {
         }}
         openGraph={{
           type: "website",
-          url: "",
+          url: "https://the-y-app.vercel.app/",
           title: "Y",
           description: "Twitter like post",
           images: [
             {
-              url: `/api/og?title=${data.post.content}&author=${
-                data.author.name || "author"
-              }`,
+              url: `https://the-y-app.vercel.app/api/og?title=${
+                data.post.content
+              }&author=${data.author.name || "author"}`,
               width: 1200,
               height: 600,
               alt: "Y Post",
