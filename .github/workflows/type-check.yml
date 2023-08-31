@@ -1,0 +1,32 @@
+name: Type and Lint Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches:
+      - main
+env:
+  NODE_VERSION: 18.16.0
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+jobs:
+  type-check:
+    name: Run tsc and Lint
+    timeout-minutes: 15
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Typescript
+        run: pnpm run typecheck
+
+      - name: Lint
+        run: pnpm run lint
