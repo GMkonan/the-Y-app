@@ -12,6 +12,7 @@
 - [] Make it easier to copy text inside post
 - [X] deploy to vercel
     - [X] put URL into og NextSEO (id page)
+- create proper login (right sidebar at least)
 
 https://og-playground.vercel.app/
 
